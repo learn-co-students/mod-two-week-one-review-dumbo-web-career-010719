@@ -26,3 +26,10 @@
   <%=  f.submit %>
 
   <% end %>
+
+  <div class="col-sm-1">
+  <form action="/seas/<%=@sea.id%>" method="POST" style="margin: 0 auto">
+    <input type="hidden" name="_method" value="DELETE" />
+      <input class="btn btn-danger" type="submit" value="Delete"/>
+  </form>
+  </div>

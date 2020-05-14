@@ -1,28 +1,18 @@
-<%= form_for @sea do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :temperature %>
-  <%= f.number_field :temperature %>
-
-  <%= f.label :bio %>
-  <%= f.text_area :bio %>
-
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
-
-  <%= f.label :mood %>
-  <%= f.text_field :mood %>
-
-  <%= f.label :favorite_color %>
-  <%= f.text_field :favorite_color %>
-
-  <%= f.label :scariest_creature %>
-  <%= f.text_field :scariest_creature %>
-
-  <%= f.label :has_mermaids %>
-  <%= f.check_box :has_mermaids %>
-
-  <%=  f.submit %>
-
-  <% end %>
+<div class="container">
+  <form method="POST" action="/seas">
+    <p>Name: <input class="form-control" type="text" name="sea[name]"></p>
+    <p>Bio: <input class="form-control" type="text" name="sea[bio]"></p>
+    <p>Image URL: <input class="form-control" type="text" name="sea[image_url]"></p>
+    <p>Temperature: <input class="form-control" type="text" name="sea[temperature]"></p>
+    <p>Favorite Color: <input class="form-control" type="text" name="sea[favorite_color]"></p>
+    <p>Scariest Creature: <input class="form-control" type="text" name="sea[scariest_creature]"></p>
+    <p>Mood: <input class="form-control" type="text" name="sea[mood]"></p>
+    <div class="checkbox">
+      <label><input type="checkbox" name="sea[has_mermaids]">Has Mermaids</label>
+    </div>
+    <input class="form-control btn btn-info" type="submit">
+  </form>
+  <div class="text-center">
+    <button class="btn btn-info" style="margin: 1em"><a class="btn-info" href="/seas">All Seas</a></button>
+  </div>
+</div>
